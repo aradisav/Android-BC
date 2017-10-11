@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Android-BC</string>
-    <string name="title">My Tracks</string>
+    <string name="my_tracks.title">My Tracks</string>
+    <string name="my_tracks.footer_button">New Track</string>
+    <string name="my_tracks.empty_list">You have no tracks recorded.\nClick on New Track button to start recording tracks.</string>
 </resources>
