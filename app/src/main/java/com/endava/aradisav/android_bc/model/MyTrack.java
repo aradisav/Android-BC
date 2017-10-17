@@ -1,7 +1,6 @@
 package com.endava.aradisav.android_bc.model;
 
-import com.endava.aradisav.android_bc.model.Location;
-
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,10 +8,21 @@ import java.util.List;
  */
 
 public class MyTrack {
-    List<Location> locationList;
-    String name;
-    String description;
+    private List<Location> locationList;
+    private String name;
+    private String description;
 
+    public MyTrack() {
+        name = "Default";
+        description = "Default";
+        locationList = new ArrayList<>();
+    }
+
+    public MyTrack(String name, String description) {
+        this.name = name;
+        this.description = description;
+        locationList = new ArrayList<>();
+    }
 
     public List<Location> getLocationList() {
         return locationList;

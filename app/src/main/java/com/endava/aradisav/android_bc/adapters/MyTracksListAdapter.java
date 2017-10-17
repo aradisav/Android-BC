@@ -5,10 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.endava.aradisav.android_bc.R;
+import com.endava.aradisav.android_bc.model.MyTrack;
+
+import java.util.List;
 
 /**
  * Created by alex on 10/11/17.
@@ -16,9 +18,9 @@ import com.endava.aradisav.android_bc.R;
 
 public class MyTracksListAdapter extends ArrayAdapter {
     private final Context context;
-    private final String[] values;
+    private final List<MyTrack> values;
 
-    public MyTracksListAdapter(Context context, String[] values) {
+    public MyTracksListAdapter(Context context, List<MyTrack> values) {
         super(context, R.layout.my_tracks_list_item, values);
         this.context = context;
         this.values = values;
@@ -31,17 +33,13 @@ public class MyTracksListAdapter extends ArrayAdapter {
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         View rowView = inflater.inflate(R.layout.my_tracks_list_item, parent, false);
-        TextView textView3 = (TextView) rowView.findViewById(R.id.textView3);
-        TextView textView4 = (TextView) rowView.findViewById(R.id.textView4);
-        TextView textView5 = (TextView) rowView.findViewById(R.id.textView3);
+        TextView name = (TextView) rowView.findViewById(R.id.textView3);
+        TextView description = (TextView) rowView.findViewById(R.id.textView4);
+        TextView locationCount = (TextView) rowView.findViewById(R.id.textView5);
 
-
-        textView3.setText(values[position]);
-
-        // Change icon based on name
-        String s = values[position];
-
-        System.out.println(s);
+        name.setText(values.get(position).getName());
+        description.setText(values.get(position).getDescription());
+        locationCount.setText("" + values.get(position).getLocationList().size() + " location samples");
 
         return rowView;
     }

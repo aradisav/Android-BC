@@ -12,30 +12,39 @@ import java.util.List;
 public class MyTracksService {
     private static final MyTracksService ourInstance = new MyTracksService();
 
-    static MyTracksService getInstance() {
+    static {
+        ourInstance.trackList.add(new MyTrack("Track1", "Desc1"));
+        ourInstance.trackList.add(new MyTrack("Track2", "Desc2"));
+        ourInstance.trackList.add(new MyTrack("Track3", "Desc3"));
+
+    }
+
+
+    public static MyTracksService getInstance() {
         return ourInstance;
     }
 
     private MyTracksService() {
+        trackList = new ArrayList<MyTrack>();
     }
 
+    private List<MyTrack> trackList;
 
-    public MyTrack createMyTrack(String name, String description){
+    public MyTrack createMyTrack(String name, String description) {
         MyTrack newTrack = new MyTrack();
         newTrack.setDescription(description);
         newTrack.setName(name);
+        trackList.add(newTrack);
         return newTrack;
     }
 
 
-    public List<MyTrack> getListOfMyTracks(){
-        List<MyTrack> list = new ArrayList<MyTrack>();
-        return list;
+    public List<MyTrack> getListOfMyTracks() {
+        return trackList;
     }
 
-    public void saveMyTrack(MyTrack myTrack){
-
-
+    public void saveMyTrack(MyTrack myTrack) {
+        trackList.add(myTrack);
     }
 
 
