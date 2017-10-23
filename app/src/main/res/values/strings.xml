@@ -3,4 +3,18 @@
     <string name="my_tracks.title">My Tracks</string>
     <string name="my_tracks.footer_button">New Track</string>
     <string name="my_tracks.empty_list">You have no tracks recorded.\nClick on New Track button to start recording tracks.</string>
+
+    <string name="new_track.header.label">New Track</string>
+    <string name="new_track.footer.button">Start</string>
+    <string name="new_track.name">Name:</string>
+    <string name="new_track.description">Description:</string>
+
+    <string name="add_location.longitude">Longitude:</string>
+    <string name="add_location.latitude">Latitude:</string>
+    <string name="add_location.altitude">Altitude:</string>
+    <string name="add_location.speed">Speed:</string>
+    <string name="add_location.measure.speed">m/s</string>
+    <string name="add_location.measure.meter">m</string>
+    <string name="add_location.header.label">Add Location</string>
+    <string name="add_location.footer.button">Add</string>
 </resources>

@@ -33,4 +33,10 @@ public class MyTracksActivity extends AppCompatActivity {
         }
 
     }
+
+    public void onClick() {
+
+    }
+    
+
 }

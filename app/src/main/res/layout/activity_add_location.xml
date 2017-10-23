@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.endava.aradisav.android_bc.AddLocationActivity">
+
+    <TextView
+        style="@style/HeaderTitle"
+        android:id="@+id/headerLabel"
+        android:text="@string/add_location.header.label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/label01"
+        android:text="@string/add_location.latitude"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerLabel"
+        android:labelFor="@+id/editText01"
+        style="@style/Label" />
+
+    <EditText
+        android:id="@+id/editText01"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label01" />
+
+    <EditText
+        android:id="@+id/editText02"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label02" />
+
+    <EditText
+        android:id="@+id/editText03"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label03"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <EditText
+        android:id="@+id/editText04"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label04" />
+
+    <TextView
+        android:id="@+id/label02"
+        android:labelFor="@id/editText02"
+        android:text="@string/add_location.longitude"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText01"
+        style="@style/Label" />
+
+    <TextView
+        android:id="@+id/label03"
+        android:labelFor="@id/editText03"
+        android:text="@string/add_location.altitude"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText02"
+        style="@style/Label" />
+
+    <TextView
+        android:id="@+id/label04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="3dp"
+        android:labelFor="@id/editText04"
+        android:text="@string/add_location.speed"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText03" />
+
+    <TextView
+        android:id="@+id/measure01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/add_location.measure.meter"
+        app:layout_constraintBottom_toBottomOf="@+id/editText03"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/measure02"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText03" />
+
+    <TextView
+        android:id="@+id/measure02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/add_location.measure.speed"
+        app:layout_constraintBottom_toBottomOf="@+id/editText04"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText04" />
+
+    <Button
+        style="@style/footerButton"
+        android:id="@+id/footerButton"
+        android:text="@string/add_location.footer.button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
